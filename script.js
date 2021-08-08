@@ -97,3 +97,36 @@ console.log(shirtsDelivery3);
 console.log(shirtsDelivery4);
 
 // ========================================xxx==================================== //
+
+// ============================Problem - 4 ====================================== //
+
+const friendsName = [
+  "abdullah",
+  "zaman",
+  "samin yasir",
+  "hailey baldwin",
+  "selena",
+  "shakib",
+  "mushfiqur",
+];
+
+function perfectFriend(friendsName) {
+  let deservedName = "";
+  if (typeof friendsName == "number") {
+    return "Hey, We are searching for your friends name, not a number 😁😁";
+  } else if (typeof friendsName == "boolean") {
+    return "Don't give boolean please 😃";
+  } else {
+    for (const name of friendsName) {
+      if (name.length == 5) {
+        deservedName = name;
+      }
+    }
+    return deservedName;
+  }
+}
+
+const friend = perfectFriend(friendsName);
+console.log(friend);
+
+// ==================================xxx======================================= //
