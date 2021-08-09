@@ -1,4 +1,4 @@
-// ========================Problem - 1============================== //
+// ==========Problem - 1=========== //
 
 function seerToMon(seer) {
   if (typeof seer != "number") {
@@ -18,9 +18,9 @@ console.log(riceMon);
 console.log(wheatMon);
 console.log(wheatMon2);
 
-// ===============================xxx======================================== //
+// ==================xxx=============== //
 
-// =================================Problem - 2====================================== //
+// =================Problem - 2============= //
 
 function totalSales(shirts, pants, shoes) {
   if (typeof (shirts && pants && shoes) != "number") {
@@ -51,7 +51,7 @@ console.log(sumSales2);
 
 // =====================================xxx================================== //
 
-// ==============================Problem - 3============================== //
+// ============Problem - 3=========== //
 
 function deliveryCost(shirts) {
   const firstHundredShirtsPerPrice = 100;
@@ -96,12 +96,14 @@ console.log(shirtsDelivery2);
 console.log(shirtsDelivery3);
 console.log(shirtsDelivery4);
 
-// ========================================xxx==================================== //
+// =================xxx========== //
 
-// ============================Problem - 4 ====================================== //
+// ==============Problem - 4 ========= //
 
 const friendsName = [
   "abdullah",
+  "samia",
+  "nishi",
   "zaman",
   "samin yasir",
   "hailey baldwin",
@@ -111,7 +113,6 @@ const friendsName = [
 ];
 
 function perfectFriend(friendsName) {
-  let deservedName = "";
   if (typeof friendsName == "number") {
     return "Hey, We are searching for your friends name, not a number 😁😁";
   } else if (typeof friendsName == "boolean") {
@@ -119,14 +120,15 @@ function perfectFriend(friendsName) {
   } else {
     for (const name of friendsName) {
       if (name.length == 5) {
-        deservedName = name;
+        return name;
       }
     }
-    return deservedName;
   }
 }
 
 const friend = perfectFriend(friendsName);
+const friend1 = perfectFriend(12);
 console.log(friend);
+console.log(friend1);
 
-// ==================================xxx======================================= //
+// =================xxx============= //
