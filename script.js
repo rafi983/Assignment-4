@@ -6,26 +6,23 @@ function seerToMon(seer) {
   } else if (seer < 0) {
     return "Please give a positive number";
   } else {
-    const mon = seer * 0.025;
+    const mon = seer / 40;
     return mon;
   }
 }
-
-const riceMon = seerToMon(200);
-const wheatMon = seerToMon(-2);
-const wheatMon2 = seerToMon("wheat floor");
-console.log(riceMon);
-console.log(wheatMon);
-console.log(wheatMon2);
 
 // ==================xxx=============== //
 
 // =================Problem - 2============= //
 
 function totalSales(shirts, pants, shoes) {
-  if (typeof (shirts && pants && shoes) != "number") {
+  if (
+    typeof shirts != "number" ||
+    typeof pants != "number" ||
+    typeof shoes != "number"
+  ) {
     return "Give me a number of how many u want to buy for Eid shopping 😀😀";
-  } else if ((shirts && pants && shoes) < 0) {
+  } else if (shirts < 0 || pants < 0 || shoes < 0) {
     return "please, give positive value";
   } else {
     const numberOfShirts = shirts;
@@ -41,13 +38,6 @@ function totalSales(shirts, pants, shoes) {
     return salesInTotals;
   }
 }
-
-let sumSales = totalSales("hello", "bangladesh", "dhaka");
-let sumSales1 = totalSales(-2, -56, -1);
-let sumSales2 = totalSales(2, 3, 5);
-console.log(sumSales);
-console.log(sumSales1);
-console.log(sumSales2);
 
 // =====================================xxx================================== //
 
@@ -85,36 +75,18 @@ function deliveryCost(shirts) {
     }
   }
 }
-const shirtsDelivery = deliveryCost(120);
-const shirtsDelivery1 = deliveryCost(250);
-const shirtsDelivery2 = deliveryCost(330);
-const shirtsDelivery3 = deliveryCost(-330);
-const shirtsDelivery4 = deliveryCost("shirts");
-console.log(shirtsDelivery);
-console.log(shirtsDelivery1);
-console.log(shirtsDelivery2);
-console.log(shirtsDelivery3);
-console.log(shirtsDelivery4);
 
 // =================xxx========== //
 
 // ==============Problem - 4 ========= //
-
 const friendsName = [
-  "abdullah",
-  "samia",
-  "nishi",
-  "zaman",
-  "samin yasir",
-  "hailey baldwin",
-  "selena",
-  "shakib",
-  "mushfiqur",
-];
+  "abdullah", "samia","nishi", "zaman","hailey", "selena", "mushfiqur"];
 
 function perfectFriend(friendsName) {
   if (typeof friendsName == "number") {
     return "Hey, We are searching for your friends name, not a number 😁😁";
+  } else if (friendsName.length == 0) {
+    return "please give a valid array";
   } else if (typeof friendsName == "boolean") {
     return "Don't give boolean please 😃";
   } else {
@@ -125,10 +97,5 @@ function perfectFriend(friendsName) {
     }
   }
 }
-
-const friend = perfectFriend(friendsName);
-const friend1 = perfectFriend(12);
-console.log(friend);
-console.log(friend1);
 
 // =================xxx============= //
